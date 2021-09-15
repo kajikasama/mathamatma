@@ -19,10 +19,16 @@ use App\Http\Controllers\AuthorController;
 */
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home']);
+    return view('home', [
+        'title' => 'Home',
+        'active' => 'home'
+    ]);
 });
 Route::get('/restorations', function () {
-    return view('restoration', ['title' => 'Restorations']);
+    return view('restoration', [
+        'title' => 'Restorations',
+        'active' => 'restoration'
+    ]);
 });
 
 Route::get('/posts', [PostController::class, 'index']);
@@ -32,12 +38,14 @@ Route::get('/authors', [AuthorController::class, 'index']);
 Route::get('/category/{category:slug}', function (Category $category){
     return view('posts', [
         'title' => "Category By : $category->name",
-        'posts' => $category->posts->load('category', 'author')
+        'posts' => $category->posts->load('category', 'author'),
+        'active' => 'post'
     ]);
 });
 Route::get('/author/{author:slug}', function (Author $author){
     return view('posts', [
         'title' => "Author By : $author->name",
-        'posts' => $author->posts->load('category', 'author')
+        'posts' => $author->posts->load('category', 'author'),
+        'active' => 'post'
     ]);
 });

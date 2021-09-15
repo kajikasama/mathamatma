@@ -26,8 +26,9 @@ class PostsFactory extends Factory
             'slug' => $this->faker->slug(),
             'author_id' => mt_rand(1,5),
             'category_id' => mt_rand(1,3), 
-            'excerpt' => $this->faker->paragraph(),
-            'body' => $this->faker->paragraph(mt_rand(8,12))
+            'excerpt' => $this->faker->paragraph(), 
+            // 'body' => $this->faker->paragraphs(mt_rand(8,12))
+            'body' => collect($this->faker->paragraphs(mt_rand(5,10)), true)->map(fn ($p) => "<p>$p</p>")->implode('')
         ];
     }
 }

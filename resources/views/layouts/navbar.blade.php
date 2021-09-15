@@ -7,19 +7,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === 'Home') ? 'active fw-bold' : '' }}" aria-current="page" href="/">Home</a>
+                    <a class="nav-link {{ ($active === 'home') ? 'active fw-bold' : '' }}" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === 'Post') ? 'active fw-bold' : '' }}" href="/posts">Posts</a>
+                    <a class="nav-link {{ ($active === 'post') ? 'active fw-bold' : '' }}" href="/posts">Posts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === 'Category') ? 'active fw-bold' : '' }}" href="/categories">Category</a>
+                    <a class="nav-link {{ ($active === 'category') ? 'active fw-bold' : '' }}" href="/categories">Category</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === 'Author') ? 'active fw-bold' : '' }}" href="/authors">Authors List</a>
+                    <a class="nav-link {{ ($active === 'author') ? 'active fw-bold' : '' }}" href="/authors">Authors List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === 'Restorations') ? 'active fw-bold' : '' }}" href="/restorations">Restorations</a>
+                    <a class="nav-link {{ ($active === 'restoration') ? 'active fw-bold' : '' }}" href="/restorations">Restorations</a>
                 </li>
             </ul>
         </div>

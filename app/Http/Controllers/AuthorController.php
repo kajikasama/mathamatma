@@ -16,7 +16,8 @@ class AuthorController extends Controller
     {
         return view('authors', [
             'title' => 'Author',
-            'author' => Author::all()
+            'author' => Author::all(),
+            'active' => 'author'
         ]);
     }
 }

@@ -12,6 +12,7 @@ Simple Blog Post Created By **[Chandra](https://fb.me/banana.garuda)**
 - Make *Authors* Section
 - Optimizing *Peformance* Each Query *Databases*
 - Updating *Fresh* UI Design
+- fixing UI Design
 
 <p>Nothing Special Just Simple But Get Benefit</p> 
 
