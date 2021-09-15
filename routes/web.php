@@ -32,12 +32,12 @@ Route::get('/authors', [AuthorController::class, 'index']);
 Route::get('/category/{category:slug}', function (Category $category){
     return view('posts', [
         'title' => "Category By : $category->name",
-        'posts' => $category->posts
+        'posts' => $category->posts->load('category', 'author')
     ]);
 });
 Route::get('/author/{author:slug}', function (Author $author){
     return view('posts', [
         'title' => "Author By : $author->name",
-        'posts' => $author->posts
+        'posts' => $author->posts->load('category', 'author')
     ]);
 });

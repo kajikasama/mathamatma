@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         // User::factory(10)->create();
         Category::create([
-            'name' => 'Genshin Impact',
-            'slug' => 'genshin_impact'
+            'name' => 'Gaming',
+            'slug' => 'gaming'
         ]);
         Category::create([
             'name' => 'Producting Music',
@@ -29,6 +29,10 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web_programming'
+        ]);
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal'
         ]);
 
         Author::factory(5)->create();

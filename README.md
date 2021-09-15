@@ -10,5 +10,9 @@ Simple Blog Post Created By **[Chandra](https://fb.me/banana.garuda)**
 - Make *Posts* Section
 - Make *Categories* Section
 - Make *Authors* Section
+- Optimizing *Peformance* Each Query *Databases*
+- Updating *Fresh* UI Design
 
 <p>Nothing Special Just Simple But Get Benefit</p> 
+
+Special Thanks for Padika
