@@ -35,17 +35,18 @@ Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post:slug}', [PostController::class, 'selectPost']);
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/authors', [AuthorController::class, 'index']);
-Route::get('/category/{category:slug}', function (Category $category){
-    return view('posts', [
-        'title' => "Category By : $category->name",
-        'posts' => $category->posts->load('category', 'author'),
-        'active' => 'post'
-    ]);
-});
-Route::get('/author/{author:slug}', function (Author $author){
-    return view('posts', [
-        'title' => "Author By : $author->name",
-        'posts' => $author->posts->load('category', 'author'),
-        'active' => 'post'
-    ]);
-});
+
+// Route::get('/category/{category:slug}', function (Category $category){
+//     return view('posts', [
+//         'title' => "Category By : $category->name",
+//         'posts' => $category->posts->load('category', 'author'),
+//         'active' => 'post'
+//     ]);
+// });
+// Route::get('/author/{author:slug}', function (Author $author){
+//     return view('posts', [
+//         'title' => "Author By : $author->name",
+//         'posts' => $author->posts->load('category', 'author'),
+//         'active' => 'post'
+//     ]);
+// });

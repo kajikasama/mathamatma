@@ -7,8 +7,8 @@
         <div class="col-md-8">
             <h2 class=' text-success fw-bold'>{{ $post->title }}</h2>
             <h6 class='text-secondary'>Written By ~
-                <a class='text-decoration-none text-success' href="/author/{{ $post->author->slug }}">{{ $post->author->name }}</a> in
-                <a class='text-decoration-none text-success' href="/category/{{ $post->category->slug }}">{{ $post->category->name }}</a> Last updated {{ $post->created_at->diffForHumans() }}</h6>
+                <a class='text-decoration-none text-success' href="/posts?author={{ $post->author->slug }}">{{ $post->author->name }}</a> in
+                <a class='text-decoration-none text-success' href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a> Last updated {{ $post->created_at->diffForHumans() }}</h6>
             <hr>
             <img src="https://source.unsplash.com/1200x400/?{{ $post->category->name }}" alt="{{ $post->category->name }}" class='img-fluid'>
             <hr>
